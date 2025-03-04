@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.text.DecimalFormat
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,9 +30,9 @@ class MainActivity : AppCompatActivity() {
         val textView : TextView = findViewById(R.id.convert_string)
 
         if(dollarText.text.isNotEmpty()){
-            val dollarValue = dollarText.text.toString().toFloatOrNull()
-            val euro = dollarValue?.times( 0.85f)
-            euro.toString().also { textView.text = it }
+            val dollarValue = dollarText.text.toString().toDoubleOrNull()
+            val euro = dollarValue?.times( 0.85)
+            textView.text = DecimalFormat.getCurrencyInstance(Locale.ITALY).format(euro)
         }
     }
 }
