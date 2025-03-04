@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun convertCurrency(view :View){
-        val dollarText :EditText = findViewById(R.id.currency_input)
+        val dollarText : EditText = findViewById(R.id.currency_input)
         val textView : TextView = findViewById(R.id.convert_string)
 
         if(dollarText.text.isNotEmpty()){

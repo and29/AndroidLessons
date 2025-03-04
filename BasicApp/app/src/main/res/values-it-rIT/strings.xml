@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">BasicApp</string>
     <string name="convert">Converti</string>
+    <string name="dollars">Dollars</string>
 </resources>
