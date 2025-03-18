@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="timerTextView" type="id" />
+    <item name="player1Counter" type="id" />
+    <item name="player2Counter" type="id" />
+    <item name="buttonPlayer1" type="id" />
+    <item name="buttonPlayer2" type="id" />
+    <item name="restartButton" type="id" />
+    <item name="resultTextView" type="id" />
+</resources>
