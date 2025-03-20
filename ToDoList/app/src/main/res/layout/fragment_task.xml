@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".TaskFragment">
+
+    <CheckBox
+    android:id="@+id/checkBoxDone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/taskText"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text=""
+        android:hint="@string/new_task"
+        android:layout_weight="6"/>
+
+    <Button
+        android:id="@+id/deleteTask"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/trasparent"
+        android:text="X"
+        android:padding="0dp"/>
+
+
+</LinearLayout>
+
