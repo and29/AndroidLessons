@@ -67,18 +67,7 @@ class MainActivity : AppCompatActivity() , OnTaskDeleteListener {
         saveTasks(taskList)
     }
 
-    fun saveTasks(view: View){
-        var taskList = mutableListOf<Task>()
-        val fragments = supportFragmentManager.fragments
-        for (fragment in fragments) {
-            if (fragment is TaskFragment) {
-                val check = fragment.view?.findViewById<CheckBox>(R.id.checkBoxDone)?.isActivated.let { false }
-                val text = fragment.view?.findViewById<EditText>(R.id.taskText)?.text.toString()
-                taskList.add(Task(check,text))
-            }
-        }
-        saveTasks(taskList)
-    }
+
     fun saveTasks(taskList: List<Task>) {
         val prefs = getSharedPreferences("tasks", Context.MODE_PRIVATE)
         val editor = prefs.edit()
