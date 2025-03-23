@@ -52,15 +52,15 @@ class MainActivity : AppCompatActivity() , OnTaskDeleteListener {
         return taskList
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onPause() {
+        super.onPause()
 
         var taskList = mutableListOf<Task>()
         val fragments = supportFragmentManager.fragments
         for (fragment in fragments) {
             if (fragment is TaskFragment) {
-                val check = fragment.chechbox.let { false }
-                val text = fragment.taskText.let { "" }
+                val check = fragment.view?.findViewById<CheckBox>(R.id.checkBoxDone)?.isActivated.let { false }
+                val text = fragment.view?.findViewById<EditText>(R.id.taskText)?.text.toString()
                 taskList.add(Task(check,text))
             }
         }
