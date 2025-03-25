@@ -1,5 +1,6 @@
 package it.liceonewton.todolist
 
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
 
 private const val ARG_PARAM1 = "task_checkbox"
 private const val ARG_PARAM2 = "task_text"
@@ -52,6 +54,14 @@ class TaskFragment : Fragment() {
                 taskText = s.toString()
             }
         })
+
+
+        val mImage =
+            context?.let { getDrawable(it,R.drawable.delete_icon) }
+
+
+        deleteButton?.setCompoundDrawablesWithIntrinsicBounds(mImage, null, null, null)
+
         return view
     }
 

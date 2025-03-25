@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/trasparent"
-        android:text="X"
+        android:textColor="@color/black"
+
         android:padding="0dp"/>
 
 
